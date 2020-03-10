@@ -27,9 +27,7 @@ public class AccountServiceImpl implements IAccountService {
     public void setAccountDao(IAccountDao accountDao) {
         this.accountDao = accountDao;
     }
-
-
-
+    
     public List<Account> findAllAccount() {
         return accountDao.findAllAccount();
     }
