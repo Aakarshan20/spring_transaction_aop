@@ -27,7 +27,7 @@ public class AccountServiceImpl implements IAccountService {
     public void setAccountDao(IAccountDao accountDao) {
         this.accountDao = accountDao;
     }
-    
+
     public List<Account> findAllAccount() {
         return accountDao.findAllAccount();
     }
@@ -58,6 +58,7 @@ public class AccountServiceImpl implements IAccountService {
         //3.轉出帳戶扣錢
         source.setMoney(source.getMoney()-money);
         //4.轉入帳戶加錢
+        int i=1/0;
         target.setMoney(target.getMoney()+money);
         //5.更新轉出帳戶
         accountDao.updateAccount(source);
